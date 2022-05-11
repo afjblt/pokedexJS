@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+   /*======== MENU MOBILE =========*/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    width: 4rem;
+    height: 1.6rem;
+    margin-top: .5rem;
+    right: 1.5rem;
+
+}
+
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: .3rem;
+    background-color: rgba(0, 0, 0, 0.363);
+
+    border-radius: 2rem;
+
+    transition: .8s ease;
+}
+
+.hamburger::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: .3rem;
+    background-color: rgba(0, 0, 0, 0.363);
+    top: .8rem;
+    right: 1rem;
+
+    border-radius: 2rem;
+
+    transition: .8s ease;
+}
+
+.hamburger.active::after {
+    transform: rotate(225deg);
+    top: .8rem;
+    right: 1rem;
+}
+
+.hamburger.active::before {
+    transform: rotate(-225deg);
+    width: 3rem;
+    top: .8rem;
+}
+
+@media (max-width: 700px) {
+    .pokebolaBG {
+        left: 10rem;
+    }
+    
+    .sidebar {
+        position: absolute;
+        /* display: none; */
+        overflow: hidden;
+        top: 18vh;
+        color: white;
+        padding: 0rem;
+        right: 0;
+        width: 0vw;
+        height: 100vh;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: width .5s;
+    }
+    
+    .sidebar.open {
+        z-index: 999;
+        display: block;
+        width: 40vw;
+        padding: 2rem;
+    }
+    
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 560px) {
+    .pokebolaBG {
+        left: 3rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .pokebolaBG {
+        left: -5rem;
+    }
+}
+
+
+
+/* =========== Cards colors =========== */
+.steel {
+	background-color: #696969;
+}
+
+.fire {
+	background-color: #e98f5a;
+}
+
+.grass {
+	background-color: #76f77e;
+}
+
+.electric {
+	background-color: #fae57e;
+}
+
+.water, .ice {
+	background-color: #8cd0f0;
+}
+
+.ground {
+	background-color: #c09467;
+}
+
+.rock {
+	background-color: #9b9b9a;
+}
+
+.fairy {
+	background-color: #db85eb;
+}
+
+.poison {
+	background-color: #98d7a5;
+}
+
+.bug {
+	background-color: #e7bf88;
+}
+
+.dragon {
+	background-color: #97b3e6;
+}
+
+.psychic {
+	background-color: #eaeda1;
+}
+
+.flying {
+	background-color: #a77575;
+}
+
+.fighting {
+	background-color: #b88a30;
+}
+
+.normal {
+	background-color: #f79696;
+}
+
+.ghost {
+	background-color: #66175c;
+}
+
+.dark {
+    background-color: #222;
+}
